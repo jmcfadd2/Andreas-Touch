@@ -1,0 +1,1229 @@
+* {
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+:root {
+    --ff-primary: 'Merriweather', serif;
+    --ff-secondary: 'Montserrat',
+        sans-serif;
+    --ff-logo: 'Great Vibes',
+        cursive;
+    --fw-reg: 300;
+    --fw-bold: 900;
+    --clr-light: #fff;
+    --clr-dark: #01401C;
+    --clr-accent: #42A600;
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+
+    --bs-1: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    ;
+    --bs-2: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
+        0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    ;
+    --bs-3: 0 11px 7px 0 rgba(0, 0, 0, 0.19),
+        0 13px 25px 0 rgba(0, 0, 0, 0.3);
+    ;
+    --bs-4: 0 14px 12px 0 rgba(0, 0, 0, 0.17),
+        0 20px 40px 0 rgba(0, 0, 0, 0.3);
+    ;
+    --bs-5: 0 17px 17px 0 rgba(0, 0, 0, 0.15),
+        0 27px 55px 0 rgba(0, 0, 0, 0.3);
+    ;
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --fs-h1: 3.5rem;
+        --fs-h2: 2.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+
+/* Header */
+
+#header {
+    display: flex;
+    padding: 2vh;
+    margin: 0 2vh;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header-logo {
+    font-size: var(--fs-h1);
+    text-align: center;
+    align-self: center;
+    font-family: var(--ff-logo)
+}
+
+.header-logo--text {
+    position: relative;
+    margin-bottom: 0;
+}
+
+
+
+.header-cart {
+    font-size: var(--fs-body);
+
+}
+
+.header-cart a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.header-cart .fa-envelope {
+    margin-right: 1vh;
+    margin-left: 1vh;
+}
+
+.header-phone .fa-phone-alt {
+    margin-right: 1vh;
+
+}
+
+.header-phone a{
+    color: black
+}
+
+/* Navbar */
+
+
+.nav-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: rgba(128, 128, 128, .08);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    
+
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 15px;
+    background-clip: content-box;
+
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: transform .5s ease-in-out;
+    transform: translateY(0);
+    font-family: var(--ff-secondary);
+    padding: 18px 0px;
+    
+}
+
+nav a:hover {
+    text-decoration: none;
+    transform: translateY(7px);
+
+}
+
+.active {
+
+    text-decoration: underline;
+    
+}
+
+@media (max-width: 1000px) {
+    nav a {
+        font-size: 10px;
+    }
+}
+
+/* Hero img */
+
+.hero-img {
+    height: 60vh;
+    background-color: rgba(245, 245, 245, 0.2);
+
+    background-size: cover;
+    background-position: center;
+
+    background-blend-mode: overlay;
+}
+
+.hero-crafts {
+    background-image: url(/img/masks-1.jpg);
+}
+
+.hero-mono {
+    background-image: url(/img/mono-hero.png);
+}
+
+.hero-bath {
+    background-image: url(/img/bath-hero.png);
+}
+
+/* global fonts  */
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather',
+        serif;
+    font-weight: var(--fw-bold);
+
+}
+
+p {
+    font-family: var(--ff-secondary);
+
+
+}
+
+/* Slider */
+
+.swiper-container {
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fs-h1);
+}
+
+.slide-1 {
+    background-image: url(/img/kids-mono-7-1200x800.jpg);
+    
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide-2 {
+    background-image: url(/img/pill-1-1200x800.jpg);
+    background-size: cover;
+
+}
+
+.slide-3 {
+    background-image: url(/img/bed-2-1200x800.jpg);
+    background-size: cover;
+}
+
+/* monograms section*/
+
+#monograms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "title title"
+        "kids weds"
+        "beds weds"
+        "beds  bath"
+    ;
+    column-gap: 2em;
+    row-gap: 2em;
+    padding: 2em;
+}
+
+
+
+
+#monograms>.monograms-kids {
+    grid-area: kids;
+    height: 75vh;
+    width: 60%;
+    background-color: var(--clr-accent);
+    background-image: url(/img/kids-mono-5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--bs-3),
+        var(--bs-4);
+    overflow: hidden;
+
+}
+
+#monograms>.monograms-beds {
+    grid-area: beds;
+    height: 90vh;
+    background-color: var(--clr-accent);
+    background-image: url(/img/towel-mono-5.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 30%;
+    box-shadow: var(--bs-3),
+        var(--bs-4);
+    overflow: hidden;
+}
+
+#monograms>.monograms-bath {
+    grid-area: bath;
+    height: 90vh;
+    background-color: var(--clr-accent);
+    background-image: url(/img/towel-6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    
+
+    box-shadow: var(--bs-3),
+        var(--bs-4);
+    overflow: hidden;
+    
+}
+
+#monograms>.monograms-weds {
+    grid-area: weds;
+    height: 90vh;
+    background-color: var(--clr-accent);
+    background-image: url(/img/wed-1.jpg);
+    background-size: cover;
+    box-shadow: var(--bs-3),
+        var(--bs-4);
+    overflow: hidden;
+
+}
+
+#monograms>.monograms-title {
+    grid-area: title;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    position: relative;
+    font-size: var(--fs-h2);
+    
+
+}
+
+@media (max-width: 1000px) {
+    
+    .monograms-title {
+        display: inline-block;
+        align-self: center;
+    }
+}
+
+.monograms-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+
+}
+
+.coll-title {
+    font-size: var(--fs-h3);
+    font-family: var(--ff-secondary);
+    transform: translateX(-50%);
+    position: relative;
+    transition: ease-in-out .5s;
+    text-shadow: 4px;
+    padding-left: 2vh;
+    color: var(--clr-light);
+
+}
+
+.coll-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 30%;
+    height: 4px;
+    background-color: var(--clr-accent);
+    transform: translateX(-300%);
+}
+
+.monograms-kids:hover>.coll-title,
+.coll-title::after {
+    transform: translateX(0);
+}
+
+.monograms-beds:hover>.coll-title,
+.coll-title::after {
+    transform: translateX(0);
+}
+
+.monograms-weds:hover>.coll-title,
+.coll-title::after {
+    transform: translateX(0);
+}
+
+.monograms-bath:hover>.coll-title,
+.coll-title::after {
+    transform: translateX(0);
+}
+
+@media (max-width: 1000px) {
+    #monograms {
+        display: inline-block;
+    }
+
+    .monograms-kids {
+        margin-bottom: 40px;
+    }
+
+    .monograms-beds {
+        margin-bottom: 40px;
+    }
+
+    .monograms-weds {
+        margin-bottom: 40px;
+    }
+    .coll-title {
+        transform: translate(0);
+    }
+    .coll-title::after {
+        transform: translate(0);
+    }
+}
+
+
+/* Products */
+#products {
+    text-align: center;
+}
+
+#others {
+    text-align: center;
+}
+
+.products-title {
+    display: inline-block;
+    margin-top: 10vh;
+    font-size: var(--fs-h2);
+    font-family: var(--ff-primary);
+    position: relative;
+}
+
+.products-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+}
+
+.product-card-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20vh;
+
+}
+
+.two {
+    padding-left: 30vh;
+    padding-right: 30vh;
+}
+
+.product-card-row>* {
+    flex: 1 1 1;
+}
+
+.product-card {
+    min-height: 300px;
+    width: 300px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--bs-4);
+    overflow: hidden;
+    transition: ease-in-out .85s;
+    background-blend-mode: none;
+
+
+
+}
+
+.product-card:hover {
+    background-blend-mode: overlay;
+
+}
+
+.product-card-row a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ext {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/ext-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-x: -98px;
+}
+
+.masks {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/masks-2.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.towel {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/bow-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.product-title {
+    align-self: flex-start;
+    margin-left: 3%;
+    font-size: var(--fs-h2);
+    font-family: var(--ff-secondary);
+    color: white;
+    text-decoration: none;
+    transform: translateX(-210%);
+    transition: ease-in-out .35s;
+
+
+}
+
+.product-card:hover>.product-title {
+    transform: translateX(0);
+    text-decoration: underline greenyellow;
+}
+
+.btn-contact-us {
+    height: 8vh;
+    margin-top: 5vh;
+    width: 40%;
+    background-color: black;
+    color: var(--clr-light);
+    font-family: var(--ff-secondary);
+    border: none;
+    font-size: 1.1rem;
+    transition: .18s;
+    cursor: pointer;
+    
+}
+
+.btn-contact-us:hover {
+    transform: scale(1.02);
+}
+
+
+
+@media (max-width: 1000px) {
+    .product-card {
+        margin-bottom: 70px;
+        max-width: 350px;
+    }
+    .product-card-row {
+        flex-direction: column;
+    }
+    .shop-btn {
+        margin-right: -24vh;
+        margin-left: 3vh;
+        display: inline-block;
+    }
+
+    .two {
+        padding: 0px;
+    }
+}
+/* footer */
+
+#footer {
+    height: auto;
+    background-color: gray;
+    margin-top: 10vh;
+
+}
+
+.top-footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+    padding-top: 5vh;
+}
+
+.top-footer ul {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.top-footer a {
+    margin-top: 1vh;
+    color: rgb(75, 70, 70);
+    transition: .2s ;
+}
+
+.top-footer a:hover {
+    color: var(--clr-light);
+}
+
+
+.top-footer h4 {
+    margin-bottom: 4vh;
+    font-size: var(--fs-h3);
+    position: relative;
+}
+
+.top-footer h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--clr-accent);
+}
+
+.social-icons {
+    
+    font-size: 5vh;
+    
+}
+
+.bottom-footer {
+    text-align: center;
+    margin-top: -5vh;
+}
+
+
+
+/* Page Intros  */
+
+.intro {
+    display: flex;
+    justify-content: center;
+}
+
+.intro .container {
+    display: inline-block;
+    text-align: center;
+    margin: 5vh 0;
+}
+
+.intro h2,
+p {
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-title {
+    font-size: var(--fs-h1);
+    position: relative;
+    text-align: center;
+}
+
+.intro-title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -50vh;
+    width: 100vh;
+    display: inline-block;
+    height: 4px;
+    background-color: var(--clr-accent);
+}
+
+@media (max-width: 800px) {
+    .intro-title::after {
+        width: 70%;
+        margin-left: -37vh;
+        bottom: -6px;
+    }
+}
+
+.intro-coll-title {
+    font-size: var(--fs-h1);
+    position: relative;
+    text-align: center;
+}
+
+.intro-coll-title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -1.47em;
+    width: 3em;
+    display: inline-block;
+    height: 4px;
+    background-color: var(--clr-accent);
+}
+
+.intro p {
+    font-size: var(--fs-h3);
+}
+
+/* Contact Page */
+#contact-address {
+    display: flex;
+    font-family: var(--ff-secondary);
+}
+
+.contact-form {
+    display: block;
+    width: 50%;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.contact-form h2 {
+    margin-top: 4vh;
+    font-size: var(--fs-h2);
+}
+
+.address-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    
+}
+
+.address-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+    font-size: var(--fs-h2);
+
+}
+
+.email-add {
+    margin: 10vh 0vh;
+    font-size: 4vh;
+
+}
+
+
+.phone-number {
+    margin: 0vh 0vh;
+    font-size: 4vh;
+
+}
+
+.add-container {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.add-container i {
+    font-size: var(--fs-h2);
+    margin-right: 3vh;
+}
+
+
+form {
+    padding: 2vh;
+    margin: 3vh;
+
+}
+
+input {
+    height: 5vh;
+    width: 100%;
+    margin: 1.5vh 0vh;
+}
+
+textarea {
+    height: 10vh;
+    width: 100%;
+    margin: 1.5vh 0vh;
+    font-family: var(--ff-secondary);
+}
+
+.sub-btn {
+    height: 6vh;
+    width: 100%;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    transform: scale(.90);
+    transition: ease-in-out .2s;
+
+}
+
+.sub-btn:hover {
+    transform: scale(1.0);
+}
+
+/* about page */
+
+.about-container {
+    display: flex;
+    padding-top: 7vh;
+
+}
+
+.about-container h1 {
+    padding-top: 4vh;
+    font-size: var(--fs-h2);
+}
+
+.about-img {
+    margin: 5vh;
+    padding: 2vh;
+    height: 40vh;
+    background-image: url(/img/about-1.jpg);
+    background-size: cover;
+    width: 100%;
+    
+}
+
+@media (max-width: 800px) {
+    .btn-fb {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.btn-fb button {
+    border: none;
+    background-color: var(--clr-dark);
+    width: 30%;
+    color: var(--clr-light);
+
+    border-radius: 20px;
+    height: 7vh;
+    margin-top: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn-fb button p {
+    margin: 0;
+    margin-left: 2vh;
+    margin-right: auto;
+}
+
+.btn-icon {
+    margin-left: 6vh;
+
+}
+
+@media (max-width: 800px) {
+    .about-container {
+        flex-direction: column;
+        justify-items: center;
+    }
+}
+
+/* Product details temp */
+
+.product-details-container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.product-images {
+    width: 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40%;
+}
+
+.product-info {
+    width: 40%;
+    
+}
+
+.prod-name {
+    font-size: var(--fs-h2);
+    margin-bottom: 3vh;
+    display: inline-block;
+}
+
+.product-atc-btn {
+    background-color: var(--clr-dark);
+    height: 5vh;
+
+    color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin-top: 3vh;
+    border-radius: 4vh;
+    transition: .5s ease-in-out;
+    border: none;
+
+}
+
+.product-atc-btn:hover {
+    background-color: lightgreen;
+    border: 3px lightgreen;
+}
+
+.btn-container-2 {
+    margin-left: 0;
+
+}
+
+.bows-big {
+    min-height: 100%;
+    margin-top: 20vh;
+    background-position: 0 -150px;
+}
+
+@media (max-width: 1000px) {
+    .product-details-container {
+        flex-direction: column;
+        margin-top: 60vh;
+        margin-bottom: 86vh;
+    }
+
+    .product-images {
+        width: 80%;
+        height: 70%;
+    }
+
+    .product-info {
+        margin-top: 10vh;
+        height: 70%;
+        text-align: center;
+
+    }
+
+    .prod-name {
+        display: inline-block;
+
+    }
+    .andro-name {
+        margin-left: -3vh;
+    }
+    .prod-name-div {
+        text-align: center;
+    }
+
+    .btn-contact-us {
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .bows-big {
+        background-position: 0 10px;
+        margin-top: -30vh;
+    }
+}
+
+
+
+
+/* Monograms Page */
+
+#mono-products {
+    text-align: center;
+}
+
+.mono-title-og {
+    display: inline-block;
+    position: relative;
+    font-size: var(--fs-h2);
+}
+
+
+.mono-title-og::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -9.2rem;
+    width: 6.5em;
+    display: inline-block;
+    height: 4px;
+    background-color: var(--clr-accent);
+}
+
+.mono-coll-og {
+    display: inline-block;
+    position: relative;
+    font-size: var(--fs-h2);
+}
+
+.mono-coll-og::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -3.95rem;
+    width: 3.5em;
+    display: inline-block;
+    height: 4px;
+    background-color: var(--clr-accent);
+}
+
+@media (max-width: 1000px) {
+    .mono-coll-og::after {
+        margin-left: -4.85rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .mono-title-og::after {
+        margin-left: -7.5rem;
+    }
+}
+
+.mono-card-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20vh;
+    justify-items: center;
+
+}
+
+.mono-card-row>* {
+    flex: 1 1;
+}
+
+.mono-card-row a {
+    text-decoration: none;
+    color: unset;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mono-card {
+    min-height: 450px;
+    margin-bottom: 70px;
+    width: 450px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--bs-4);
+    overflow: hidden;
+    transition: ease-in-out .85s;
+    background-blend-mode: none;
+
+
+
+}
+
+.mono-card:hover {
+    background-blend-mode: overlay;
+
+}
+
+.kids {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/kids-mono-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.beds {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/bed-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.weds {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/wed-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bath {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/bath-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mono-title {
+    font-family: var(--ff-secondary);
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: 10px;
+    position: relative;
+    
+}
+
+.mono-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--clr-accent);
+    
+
+}
+
+.contrast {
+    color: var(--clr-light);
+}
+
+.mono-title-og {
+    margin-right: 35%;  
+    margin-left: 35%;
+}
+
+.mono-card:hover>.mono-title,
+.mono-title::after {
+    transform: translateX(0);
+}
+
+@media (max-width: 1000px) {
+    .mono-card {
+        margin-bottom: 60px;
+    }
+
+}
+
+
+/* Bath  Page*/
+
+.cass {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/bath-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.hele {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/towel-mono-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.andro {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/towel-mono-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.eury {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/towel-6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Bedding Page Pics */
+
+.pers {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/towel-7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.thes {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/towel-mono-5-480x720.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.jace {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/bed-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.herk {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/bed-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*  */
+
+.sand {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/kids-mono-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.mich {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/kids-mono-4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.rafa {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/kids-mono-5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.leo {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/kids-mono-6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Wedding page pics */
+
+.cuff {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/wed-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.veil {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/wed-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.label {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/wed-4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bags {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/img/wed-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
