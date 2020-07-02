@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
 }
@@ -95,7 +96,7 @@ a {
 
 }
 
-.header-phone a{
+.header-phone a {
     color: black
 }
 
@@ -114,7 +115,7 @@ a {
 nav ul {
     list-style: none;
     margin: 0;
-    
+
 
 }
 
@@ -135,7 +136,7 @@ nav a {
     transform: translateY(0);
     font-family: var(--ff-secondary);
     padding: 18px 0px;
-    
+
 }
 
 nav a:hover {
@@ -147,7 +148,7 @@ nav a:hover {
 .active {
 
     text-decoration: underline;
-    
+
 }
 
 @media (max-width: 1000px) {
@@ -212,7 +213,7 @@ p {
 
 .slide-1 {
     background-image: url(/img/kids-mono-7-1200x800.jpg);
-    
+
     box-sizing: border-box;
     background-size: cover;
     background-repeat: no-repeat;
@@ -289,12 +290,12 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    
+
 
     box-shadow: var(--bs-3),
         var(--bs-4);
     overflow: hidden;
-    
+
 }
 
 #monograms>.monograms-weds {
@@ -316,12 +317,12 @@ p {
     margin-bottom: 10vh;
     position: relative;
     font-size: var(--fs-h2);
-    
+
 
 }
 
 @media (max-width: 1000px) {
-    
+
     .monograms-title {
         display: inline-block;
         align-self: center;
@@ -399,9 +400,11 @@ p {
     .monograms-weds {
         margin-bottom: 40px;
     }
+
     .coll-title {
         transform: translate(0);
     }
+
     .coll-title::after {
         transform: translate(0);
     }
@@ -528,7 +531,7 @@ p {
     font-size: 1.1rem;
     transition: .18s;
     cursor: pointer;
-    
+
 }
 
 .btn-contact-us:hover {
@@ -542,9 +545,11 @@ p {
         margin-bottom: 70px;
         max-width: 350px;
     }
+
     .product-card-row {
         flex-direction: column;
     }
+
     .shop-btn {
         margin-right: -24vh;
         margin-left: 3vh;
@@ -555,6 +560,7 @@ p {
         padding: 0px;
     }
 }
+
 /* footer */
 
 #footer {
@@ -574,13 +580,13 @@ p {
 .top-footer ul {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .top-footer a {
     margin-top: 1vh;
     color: rgb(75, 70, 70);
-    transition: .2s ;
+    transition: .2s;
 }
 
 .top-footer a:hover {
@@ -605,9 +611,9 @@ p {
 }
 
 .social-icons {
-    
+
     font-size: 5vh;
-    
+
 }
 
 .bottom-footer {
@@ -715,7 +721,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    
+
 }
 
 .address-title {
@@ -804,16 +810,10 @@ textarea {
     background-image: url(/img/about-1.jpg);
     background-size: cover;
     width: 100%;
-    
-}
-
-@media (max-width: 800px) {
-    .btn-fb {
-        margin-left: auto;
-        margin-right: auto;
-    }
 
 }
+
+
 
 .btn-fb button {
     border: none;
@@ -835,8 +835,9 @@ textarea {
 
 .btn-fb button p {
     margin: 0;
-    margin-left: 2vh;
+    margin-left: auto;
     margin-right: auto;
+    margin-right: 6vh;
 }
 
 .btn-icon {
@@ -849,6 +850,15 @@ textarea {
         flex-direction: column;
         justify-items: center;
     }
+}
+
+@media (max-width: 1000px) {
+    .btn-fb {}
+
+    .about-text {
+        text-align: center;
+    }
+
 }
 
 /* Product details temp */
@@ -869,7 +879,7 @@ textarea {
 
 .product-info {
     width: 40%;
-    
+
 }
 
 .prod-name {
@@ -933,9 +943,11 @@ textarea {
         display: inline-block;
 
     }
+
     .andro-name {
         margin-left: -3vh;
     }
+
     .prod-name-div {
         text-align: center;
     }
@@ -1083,7 +1095,7 @@ textarea {
     font-size: 50px;
     margin-left: 10px;
     position: relative;
-    
+
 }
 
 .mono-title::after {
@@ -1094,7 +1106,7 @@ textarea {
     width: 100%;
     height: 4px;
     background-color: var(--clr-accent);
-    
+
 
 }
 
@@ -1103,7 +1115,7 @@ textarea {
 }
 
 .mono-title-og {
-    margin-right: 35%;  
+    margin-right: 35%;
     margin-left: 35%;
 }
 
@@ -1128,18 +1140,21 @@ textarea {
     background-size: cover;
     background-position: center;
 }
+
 .hele {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/towel-mono-1.jpg);
     background-size: cover;
     background-position: center;
 }
+
 .andro {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/towel-mono-3.jpg);
     background-size: cover;
     background-position: center;
 }
+
 .eury {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/towel-6.jpg);
@@ -1155,18 +1170,21 @@ textarea {
     background-size: cover;
     background-position: center;
 }
+
 .thes {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/towel-mono-5-480x720.jpg);
     background-size: cover;
     background-position: center;
 }
+
 .jace {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/bed-2.jpg);
     background-size: cover;
     background-position: center;
 }
+
 .herk {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/bed-3.jpg);
@@ -1182,18 +1200,21 @@ textarea {
     background-size: cover;
     background-position: center;
 }
+
 .mich {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/kids-mono-4.jpg);
     background-size: cover;
     background-position: center;
 }
+
 .rafa {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/kids-mono-5.jpg);
     background-size: cover;
     background-position: center;
 }
+
 .leo {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/kids-mono-6.jpg);
@@ -1209,18 +1230,21 @@ textarea {
     background-size: cover;
     background-position: center;
 }
+
 .veil {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/wed-2.jpg);
     background-size: cover;
     background-position: center;
 }
+
 .label {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/wed-4.jpg);
     background-size: cover;
     background-position: center;
 }
+
 .bags {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url(/img/wed-3.jpg);
