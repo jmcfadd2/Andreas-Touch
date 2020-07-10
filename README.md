@@ -15,6 +15,10 @@ Client wanted a simple but sophisticated website that highlighted their monogram
 * Moving from the safety and familiarity of Bootstrap to full custom CSS and JS
 * Making the website responsive through the use of Media Queries instead of relying on BS
 
+## Road for Improvement
+* Move to mobile first development
+* Improve use of color and visual hierarchy in designs
+
 ## Overview
 
 Really enjoyed working on this project and learned a lot of CSS, JS, and responsive development  through study and trial and error during this development process. 
